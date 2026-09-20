@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>含羞草 在线 视频 - 自然科普与植物观赏精选资源</title>
+    <meta name="description" content="提供含羞草 在线 观看资源，包括含羞草生长过程、叶片闭合实验、药用价值科普及家庭种植指南。高清自然科普视频，解答关于含羞草为什么害羞的科学原理。">
+    <meta name="keywords" content="含羞草, 在线视频, 植物科普, 含羞草实验, 家庭种植, 含羞草药用">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --accent-color: #8BC34A;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #F9FBF9;
+            --bg-card: #FFFFFF;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: #f0f2f5;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .search-bar input {
+            border: none;
+            background: transparent;
+            outline: none;
+            padding: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(76, 175, 80, 0.1);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .thumbnail-wrapper {
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #ddd;
+        }
+
+        .thumbnail-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
+
+        .video-card:hover .play-icon {
+            background: var(--primary-color);
+        }
+
+        .video-info {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            line-height: 1.4;
+        }
+
+        .video-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .video-desc {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .video-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f2f5;
+            color: var(--text-main);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .video-btn:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* Category Section */
+        .category-section {
+            background-color: white;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: var(--bg-body);
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .cat-card:hover {
+            background: white;
+            border-color: var(--accent-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .cat-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cat-count {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-body);
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            background: var(--primary-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.8rem;
+            margin-right: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            padding-left: 34px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #eceff1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .footer-brand p {
+            color: #b0bec5;
+            max-width: 300px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #b0bec5;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #37474f;
+            padding-top: 20px;
+            text-align: center;
+            color: #78909c;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary-color)"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                <span>含羞草</span>百科
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#videos">在线视频</a></li>
+                    <li><a href="#categories">分类浏览</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索含羞草视频...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索含羞草的神奇世界</h1>
+                <p>汇聚高清植物科普视频，揭秘含羞草“害羞”的科学原理，提供家庭种植与药用价值指南。</p>
+                <div class="hero-tags">
+                    <span class="tag">#植物生长</span>
+                    <span class="tag">#科学实验</span>
+                    <span class="tag">#家庭园艺</span>
+                    <span class="tag">#药用价值</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="videos" class="section-padding category-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门含羞草 在线 视频</h2>
+                    <p>精选高质量自然科普资源，直观了解这种神奇的植物</p>
+                </div>
+
+                <div class="video-grid">
+                    <!-- Video Item 1 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/mimosa1/400/225" alt="含羞草闭合过程">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">含羞草为什么会“害羞”？科学实验揭秘</h3>
+                            <div class="video-meta">
+                                <span>科普实验</span>
+                                <span>12:30</span>
+                            </div>
+                            <p class="video-desc">通过延时摄影观察含羞草叶片在触碰后的快速闭合反应，解释其背后的生物电信号原理。</p>
+                            <a href="#" class="video-btn">立即观看</a>
+                        </div>
+                    </article>
+
+                    <!-- Video Item 2 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/mimosa2/400/225" alt="含羞草种植教程">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">含羞草家庭种植指南：从种子到开花</h3>
+                            <div class="video-meta">
+                                <span>园艺教程</span>
+                                <span>08:45</span>
+                            </div>
+                            <p class="video-desc">手把手教你如何播种含羞草种子，提供浇水、施肥及病虫害防治的实用技巧。</p>
+                            <a href="#" class="video-btn">立即观看</a>
+                        </div>
+                    </article>
+
+                    <!-- Video Item 3 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/mimosa3/400/225" alt="含羞草药用价值">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">含羞草的药用价值与禁忌</h3>
+                            <div class="video-meta">
+                                <span>健康科普</span>
+                                <span>15:20</span>
+                            </div>
+                            <p class="video-desc">解析含羞草在中医中的应用及现代医学研究，特别提醒长期接触可能引起的脱发风险。</p>
+                            <a href="#" class="video-btn">立即观看</a>
+                        </div>
+                    </article>
+
+                    <!-- Video Item 4 -->
+                    <article class="video-card">
+                        <div class="thumbnail-wrapper">
+                            <img src="https://picsum.photos/seed/mimosa4/400/225" alt="含羞草花语">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">含羞草的花语与象征意义</h3>
+                            <div class="video-meta">
+                                <span>文化解读</span>
+                                <span>05:50</span>
+                            </div>
+                            <p class="video-desc">了解含羞草在文学和情感表达中的寓意，探讨其“敏感”与“真诚”的双重含义。</p>
+                            <a href="#" class="video-btn">立即观看</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2>视频分类导航</h2>
+                    <p>按主题快速查找你感兴趣的含羞草内容</p>
+                </div>
+                <div class="category-grid">
+                    <div class="cat-card">
+                        <span class="cat-icon">🌱</span>
+                        <div class="cat-title">生长全过程</div>
+                        <div class="cat-count">24 个视频</div>
+                    </div>
+                    <div class="cat-card">
+                        <span class="cat-icon">🔬</span>
+                        <div class="cat-title">科学实验</div>
+                        <div class="cat-count">18 个视频</div>
+                    </div>
+                    <div class="cat-card">
+                        <span class="cat-icon">🏡</span>
+                        <div class="cat-title">家庭种植</div>
+                        <div class="cat-count">32 个视频</div>
+                    </div>
+                    <div class="cat-card">
+                        <span class="cat-icon">💊</span>
+                        <div class="cat-title">药用与保健</div>
+                        <div class="cat-count">15 个视频</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-padding faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于含羞草种植与观看的常见疑问</p>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item">
+                        <div class="faq-question">含羞草在什么季节最容易开花？</div>
+                        <div class="faq-answer">
+                            含羞草通常在夏秋季开花。如果你看到它开花，说明植株已经生长了一段时间，通常在播种后的2-3个月左右。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">为什么我种的含羞草不闭合？</div>
+                        <div class="faq-answer">
+                            可能是光照不足或环境过于干燥。含羞草对环境敏感，如果缺乏水分或光照过弱，其运动能力会减弱。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">含羞草适合在室内养吗？</div>
+                        <div class="faq-answer">
+                            适合，但需要放在阳光充足的窗台。此外，由于含羞草含有微毒，建议避免让儿童或宠物误食。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>含羞草百科</h3>
+                    <p>专注提供最优质的含羞草 在线 观看体验与科普知识分享平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>视频分类</h4>
+                    <ul>
+                        <li><a href="#">生长记录</a></li>
+                        <li><a href="#">科学实验</a></li>
+                        <li><a href="#">种植技巧</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关知识</h4>
+                    <ul>
+                        <li><a href="#">药用价值</a></li>
+                        <li><a href="#">花语寓意</a></li>
+                        <li><a href="#">常见品种</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 含羞草百科平台 版权所有. 本站所有视频资源仅供学习交流使用.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
