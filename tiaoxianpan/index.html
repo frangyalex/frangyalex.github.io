@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="跳线盘专业选购指南：提供跳线盘类型介绍、安装维护教程、选购参数解析及常见故障排查，帮助用户安全、高效地整理与使用网络跳线。">
+    <meta name="keywords" content="跳线盘, 网络跳线, 配线架, 机房整理, 网络设备, 安防跳线">
+    <title>跳线盘-专业网络布线整理与选购指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004494;
+            --accent-color: #e67e22;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: var(--text-dark);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #eef2f3 0%, #dfe9f3 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Feature Cards */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Types Section */
+        .types-section {
+            background-color: var(--bg-light);
+        }
+
+        .type-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .type-item {
+            flex: 1 1 300px;
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .type-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .type-badge {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .type-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        /* Selection Guide */
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .guide-sidebar {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            position: sticky;
+            top: 100px;
+        }
+
+        .guide-sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .checklist-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-top: 5px;
+            accent-color: var(--accent-color);
+        }
+
+        .guide-content article {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .guide-content article:last-child {
+            border-bottom: none;
+        }
+
+        .guide-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .guide-content p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .guide-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .guide-content li {
+            margin-bottom: 8px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                网络布线专家
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#intro" class="active">什么是跳线盘</a></li>
+                    <li><a href="#types">常见类型</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>跳线盘：网络布线的高效解决方案</h1>
+                <p>告别凌乱线缆，专业跳线盘助您实现机房、办公室及安防系统的标准化布线，提升管理效率与安全性。</p>
+                <div class="cta-buttons">
+                    <a href="#guide" class="btn btn-primary">查看选购指南</a>
+                    <a href="#types" class="btn btn-outline">了解产品类型</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么需要跳线盘？</h2>
+                    <p>跳线盘不仅是理线工具，更是网络基础设施的重要组成部分</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>提升管理效率</h3>
+                        <p>将分散的网线集中管理，通过标签快速识别端口，极大减少查找故障和重新布线的时间。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>保护线路安全</h3>
+                        <p>有效防止线缆被踩踏、拉扯或受到物理损伤，延长网络设备的使用寿命，降低维护成本。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📐</div>
+                        <h3>优化空间布局</h3>
+                        <p>紧凑的设计节省宝贵的机柜空间，保持环境整洁，符合现代数据中心和办公室的审美要求。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Types Section -->
+        <section id="types" class="section types-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见跳线盘类型</h2>
+                    <p>根据应用场景和安装方式，选择最适合的跳线盘产品</p>
+                </div>
+                <div class="type-list">
+                    <div class="type-item">
+                        <div class="type-header">
+                            <span class="type-badge">机柜用</span>
+                            <span class="type-title">19英寸跳线盘</span>
+                        </div>
+                        <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:10px;">标准机架式设计，适用于电信机柜、服务器机柜，通常支持卡接式或理线槽式设计。</p>
+                        <a href="#" style="color:var(--primary-color); font-size:0.9rem; font-weight:600;">查看详情 &rarr;</a>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-header">
+                            <span class="type-badge">墙面用</span>
+                            <span class="type-title">挂墙式跳线盘</span>
+                        </div>
+                        <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:10px;">无需安装机柜，直接固定在墙面或桌面上，常用于监控中心、弱电间及家庭网络。</p>
+                        <a href="#" style="color:var(--primary-color); font-size:0.9rem; font-weight:600;">查看详情 &rarr;</a>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-header">
+                            <span class="type-badge">桌面用</span>
+                            <span class="type-title">桌面理线盒</span>
+                        </div>
+                        <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:10px;">专为桌面环境设计，可隐藏杂乱线缆，保持桌面整洁，通常带有防尘盖。</p>
+                        <a href="#" style="color:var(--primary-color); font-size:0.9rem; font-weight:600;">查看详情 &rarr;</a>
+                    </div>
+                    <div class="type-item">
+                        <div class="type-header">
+                            <span class="type-badge">特殊材质</span>
+                            <span class="type-title">防火阻燃跳线盘</span>
+                        </div>
+                        <p style="color:var(--text-light); font-size:0.9rem; margin-bottom:10px;">采用防火材料制造，通过UL等安全认证，适用于防火等级要求严格的机房环境。</p>
+                        <a href="#" style="color:var(--primary-color); font-size:0.9rem; font-weight:600;">查看详情 &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selection Guide -->
+        <section id="guide" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>选购跳线盘的实用指南</h2>
+                    <p>掌握关键参数，避免购买到不合适的产品</p>
+                </div>
+                <div class="guide-container">
+                    <aside class="guide-sidebar">
+                        <h3>选购清单</h3>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="c1">
+                            <label for="c1">确认安装位置（机柜/墙面/桌面）</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="c2">
+                            <label for="c2">计算所需端口数量（留有余量）</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="c3">
+                            <label for="c3">检查材质（塑料/金属/防火）</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="c4">
+                            <label for="c4">确认固定方式（螺丝/支架/免打孔）</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="c5">
+                            <label for="c5">考虑线缆直径（适配网线线径）</label>
+                        </div>
+                    </aside>
+                    <div class="guide-content">
+                        <article>
+                            <h3>1. 确定安装环境</h3>
+                            <p>跳线盘的安装方式决定了产品的类型。如果是安装在标准19英寸机柜内，必须选择19英寸宽度的机架式跳线盘；如果是固定在办公室墙面或弱电间，挂墙式跳线盘更为合适；如果是用于办公桌下或桌面上，桌面理线盒是最佳选择。</p>
+                        </article>
+                        <article>
+                            <h3>2. 端口数量与线缆容量</h3>
+                            <p>根据实际使用的网线数量选择端口数量。建议预留10%-20%的余量，以备未来扩容。同时，要考虑跳线盘内部通道的深度，确保能容纳较粗的网线（如六类线或光纤），避免线缆过度弯曲导致信号衰减。</p>
+                        </article>
+                        <article>
+                            <h3>3. 材质与安全性</h3>
+                            <p>普通环境可选用ABS塑料材质，成本低且绝缘性好。但对于数据中心、机房等对防火要求高的场所，必须选择具有防火阻燃认证（如UL94 V-0等级）的金属或特殊阻燃塑料材质的跳线盘。</p>
+                        </article>
+                        <article>
+                            <h3>4. 固定与安装便利性</h3>
+                            <p>检查跳线盘的安装孔位是否匹配。机柜式通常需要螺丝固定，确保安装牢固。挂墙式则需注意支架的稳固性。部分免打孔产品虽然安装方便，但承重能力有限，不适合放置重型设备。</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于跳线盘使用与维护的常见疑问</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 跳线盘可以自己组装吗？</div>
+                        <div class="faq-answer">大多数挂墙式和桌面式跳线盘是即插即用的，不需要组装。部分机架式跳线盘可能需要将线缆整理后通过螺丝固定在支架上。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 机房里能用普通的塑料跳线盘吗？</div>
+                        <div class="faq-answer">不建议。机房对防火等级要求极高，普通塑料跳线盘在高温或火灾情况下可能释放有毒气体。应选用防火阻燃型跳线盘。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 跳线盘的网线口容易坏吗？</div>
+                        <div class="faq-answer">这取决于产品工艺。优质的跳线盘使用优质工程塑料，卡扣结构设计合理，不易断裂。劣质产品在频繁插拔后容易损坏卡口。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 如何清理跳线盘内部的灰尘？</div>
+                        <div class="faq-answer">大多数跳线盘底部设有防尘盖或透气孔。定期拔掉防尘盖，使用吸尘器或吹风机（冷风档）清理内部积灰即可。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size:0.9rem; line-height:1.6;">专注网络布线解决方案，为数据中心、企业办公及家庭网络提供高品质的理线产品与咨询服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">产品介绍</a></li>
+                        <li><a href="#guide">选购指南</a></li>
+                        <li><a href="#faq">技术支持</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@net-wiring.com</li>
+                        <li>地址：网络科技园区A座888号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 网络布线专家 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
