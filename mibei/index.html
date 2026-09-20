@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="米贝官方首页，为您提供专业的亲子早教玩具、益智积木及儿童成长陪伴产品。探索寓教于乐的玩具选择指南，了解米贝品牌理念与产品特色。">
+    <meta name="keywords" content="米贝,亲子玩具,益智积木,儿童早教,玩具推荐,米贝官网">
+    <title>米贝-专业亲子早教与益智玩具品牌</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #FF8C42;
+            --secondary-color: #4ECDC4;
+            --dark-color: #2C3E50;
+            --light-bg: #F7F9FC;
+            --white: #FFFFFF;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-radius: 12px;
+            --container-width: 1200px;
+            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-md: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #ff7626;
+            border-color: #ff7626;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--dark-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--dark-color);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFFFFF 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tag {
+            background: rgba(255, 140, 66, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover img {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #FFF5F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Product Categories */
+        .categories {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-sub);
+        }
+
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .cat-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+            height: 300px;
+            group: hover;
+        }
+
+        .cat-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .cat-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px 20px 20px;
+            color: var(--white);
+        }
+
+        .cat-overlay h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .cat-overlay p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Featured Products */
+        .products {
+            padding: 80px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-img {
+            height: 220px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-cat {
+            font-size: 12px;
+            color: var(--text-sub);
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            height: 44px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .price {
+            color: #FF4757;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .price small {
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            margin-right: 2px;
+        }
+
+        /* Brand Story */
+        .story {
+            padding: 80px 0;
+            background-color: var(--dark-color);
+            color: var(--white);
+        }
+
+        .story-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .story-text p {
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+
+        .story-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .story-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark-color);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 24px;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-sub);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 24px;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #bdc3c7;
+            font-size: 14px;
+            margin-bottom: 20px;
+            max-width: 300px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            width: 36px;
+            height: 36px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: var(--primary-color);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-wrapper nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">米贝<span>MIBEI</span></a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#products">益智玩具</a></li>
+                    <li><a href="#categories">分类</a></li>
+                    <li><a href="#story">品牌故事</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline" style="padding: 8px 16px; font-size: 14px;">登录</a>
+                <a href="#" class="btn btn-primary" style="padding: 8px 16px; font-size: 14px;">注册</a>
+                <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="hero-tags">
+                        <span class="tag">0-3岁</span>
+                        <span class="tag">3-6岁</span>
+                        <span class="tag">STEM教育</span>
+                    </div>
+                    <h1>激发孩子无限潜能的<br><span>益智成长伙伴</span></h1>
+                    <p>米贝致力于为全球家庭提供高品质、安全环保的亲子玩具。通过科学设计的互动体验，帮助孩子在游戏中学习，在探索中成长。</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-start;">
+                        <a href="#products" class="btn btn-primary">探索玩具</a>
+                        <a href="#story" class="btn btn-outline">了解品牌</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Using a placeholder that represents toys/children -->
+                    <img src="https://picsum.photos/seed/mibei-toy-hero/600/500" alt="米贝益智积木展示" width="600" height="500">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>安全环保</h3>
+                        <p>所有产品均通过国际安全认证，采用食品级材料，让家长放心。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>开发智力</h3>
+                        <p>精心设计的STEM课程体系，锻炼逻辑思维与动手能力。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>亲子互动</h3>
+                        <p>促进家庭沟通的绝佳工具，创造温馨美好的陪伴时光。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>创意无限</h3>
+                        <p>开放式玩具设计，激发孩子天马行空的想象力与创造力。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>热门分类</h2>
+                    <p>根据孩子年龄与兴趣，找到最适合的成长玩具</p>
+                </div>
+                <div class="cat-grid">
+                    <div class="cat-card">
+                        <img src="https://picsum.photos/seed/mibei-blocks/400/300" alt="乐高类积木">
+                        <div class="cat-overlay">
+                            <h3>拼插积木</h3>
+                            <p>锻炼手眼协调与空间想象力</p>
+                        </div>
+                    </div>
+                    <div class="cat-card">
+                        <img src="https://picsum.photos/seed/mibei-science/400/300" alt="科学实验套装">
+                        <div class="cat-overlay">
+                            <h3>科学实验</h3>
+                            <p>探索物理化学的奇妙世界</p>
+                        </div>
+                    </div>
+                    <div class="cat-card">
+                        <img src="https://picsum.photos/seed/mibei-art/400/300" alt="创意绘画">
+                        <div class="cat-overlay">
+                            <h3>创意美术</h3>
+                            <p>释放艺术天赋，培养审美能力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>当季推荐</h2>
+                    <p>精选最受欢迎的米贝爆款产品</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span class="badge">热销</span>
+                            <img src="https://picsum.photos/seed/prod1/300/300" alt="米贝经典积木套装">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">拼插积木</div>
+                            <h3 class="product-title">米贝经典城市交通积木套装 500片</h3>
+                            <div class="product-footer">
+                                <div class="price"><small>¥</small>299</div>
+                                <a href="#" class="btn btn-outline" style="padding: 6px 15px; font-size: 12px;">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span class="badge">新品</span>
+                            <img src="https://picsum.photos/seed/prod2/300/300" alt="科学显微镜">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">科学探索</div>
+                            <h3 class="product-title">米贝儿童专业显微镜套装 入门版</h3>
+                            <div class="product-footer">
+                                <div class="price"><small>¥</small>158</div>
+                                <a href="#" class="btn btn-outline" style="padding: 6px 15px; font-size: 12px;">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/prod3/300/300" alt="逻辑思维桌游">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">益智桌游</div>
+                            <h3 class="product-title">米贝逻辑思维训练桌游 侦探系列</h3>
+                            <div class="product-footer">
+                                <div class="price"><small>¥</small>89</div>
+                                <a href="#" class="btn btn-outline" style="padding: 6px 15px; font-size: 12px;">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <span class="badge">包邮</span>
+                            <img src="https://picsum.photos/seed/prod4/300/300" alt="早教绘本">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-cat">绘本图书</div>
+                            <h3 class="product-title">米贝全景立体互动绘本 故事套装</h3>
+                            <div class="product-footer">
+                                <div class="price"><small>¥</small>45</div>
+                                <a href="#" class="btn btn-outline" style="padding: 6px 15px; font-size: 12px;">购买</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="#" class="btn btn-primary">查看所有商品</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Story -->
+        <section class="story" id="story">
+            <div class="container story-container">
+                <div class="story-image">
+                    <img src="https://picsum.photos/seed/mibei-family/600/400" alt="米贝家庭亲子时光" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                </div>
+                <div class="story-text">
+                    <h2>关于米贝 MIBEI</h2>
+                    <p>米贝诞生于对儿童早期教育的深刻洞察。我们相信，最好的教育发生在游戏之中。自创立以来，米贝始终坚持以孩子为中心，将国际先进的教育理念与本土化需求相结合。</p>
+                    <p>每一款米贝玩具，都经过数十次迭代测试，确保既能激发孩子的好奇心，又能保证使用的安全性。我们致力于成为全球家庭信赖的育儿伙伴，陪伴每一个孩子快乐成长。</p>
+                    <ul class="story-list">
+                        <li>专注早教玩具领域 10 年</li>
+                        <li>拥有 50+ 项国际专利设计</li>
+                        <li>产品远销 30 个国家和地区</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq" id="faq">
+            <div class="container faq-wrapper">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>关于米贝产品与购买的解答</p>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">米贝玩具适合多大年龄的孩子使用？</div>
+                    <div class="faq-answer">
+                        <p>我们的产品通常会在包装上明确标注适用年龄范围，通常从1岁到12岁不等。建议家长根据孩子的年龄和动手能力选择合适难度的产品。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">玩具的材料安全吗？</div>
+                    <div class="faq-answer">
+                        <p>非常安全。米贝所有产品均选用环保ABS塑料和食品级水性油墨，并通过了欧盟CE认证及中国3C认证，无毒无害。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如果产品出现质量问题怎么办？</div>
+                    <div class="faq-answer">
+                        <p>我们提供7天无理由退换货服务。如果在收到商品后发现质量问题，请联系我们的客服中心，我们将为您免费更换或退款。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>米贝 MIBEI</h3>
+                    <p>让每一次探索都充满乐趣，让每一次成长都值得记录。米贝，您身边的育儿专家。</p>
+                    <div class="social-icons">
+                        <a href="#">WB</a>
+                        <a href="#">WX</a>
+                        <a href="#">DY</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="#">新用户注册</a></li>
+                        <li><a href="#">订单查询</a></li>
+                        <li><a href="#">支付方式</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">媒体报道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅资讯</h4>
+                    <p style="color:#bdc3c7; font-size:13px; margin-bottom:10px;">订阅我们，获取育儿技巧与新品优惠。</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！');">
+                        <input type="email" placeholder="输入您的邮箱" required>
+                        <button type="submit" class="btn btn-primary" style="padding: 8px 15px;">订阅</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 米贝 MIBEI. All Rights Reserved. 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                
+                // Close all others
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Toggle current
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+              </html>
