@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>已知在三角形abc中 - 几何定理证明与计算工具</title>
+    <meta name="description" content="已知在三角形abc中，本文提供详细的几何图形定义、边长与角度计算方法、余弦定理与正弦定理应用指南，以及在线三角形计算工具。">
+    <meta name="keywords" content="已知在三角形abc中, 三角形abc, 几何计算, 余弦定理, 正弦定理, 三角形性质">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --success-color: #27ae60;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* 主要内容网格 */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: -30px;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* 卡片通用样式 */
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* 定义与性质 */
+        .properties-list {
+            list-style: none;
+        }
+
+        .properties-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .properties-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        /* 公式区域 */
+        .formula-box {
+            background: #f1f8ff;
+            padding: 20px;
+            border-radius: 6px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.2rem;
+            text-align: center;
+            margin: 20px 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* 计算器样式 */
+        .calc-group {
+            margin-bottom: 20px;
+        }
+
+        .calc-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .calc-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .result-display {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e8f5e9;
+            color: var(--success-color);
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            display: none;
+        }
+
+        /* 侧边栏 */
+        aside h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .sidebar-link {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .sidebar-link:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+            transition: all 0.2s;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* SVG 图形展示 */
+        .triangle-visual {
+            width: 100%;
+            height: 250px;
+            background-color: #fff;
+            border: 1px dashed var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .triangle-svg {
+            width: 80%;
+            height: 100%;
+        }
+
+        .vertex-label {
+            font-size: 18px;
+            font-weight: bold;
+            fill: var(--primary-color);
+        }
+
+        .side-label {
+            font-size: 14px;
+            fill: var(--text-secondary);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 600px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 22h20L12 2zm0 3.5L18.5 20H5.5L12 5.5z"/>
+            </svg>
+            几何实验室
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#definitions">定义</a></li>
+                <li><a href="#theorems">定理</a></li>
+                <li><a href="#calculator">计算器</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>已知在三角形abc中</h1>
+        <p>探索三角形的基本性质、边角关系及计算方法，掌握几何学核心概念。</p>
+    </div>
+</section>
+
+<main class="container">
+    <div class="main-grid">
+        
+        <!-- 左侧：内容区 -->
+        <div class="content-area">
+            
+            <!-- 定义部分 -->
+            <section id="definitions" class="card">
+                <h2>三角形的基本定义</h2>
+                <p>已知在三角形abc中，通常意味着我们在研究一个由三条线段首尾相连围成的封闭图形。这三个顶点分别标记为点A、点B和点C，对应的边长通常标记为a、b、c。</p>
+                
+                <div class="triangle-visual">
+                    <svg class="triangle-svg" viewBox="0 0 400 300">
+                        <!-- 三角形形状 -->
+                        <polygon points="200,50 50,250 350,250" fill="#f0f8ff" stroke="#3498db" stroke-width="3"/>
+                        <!-- 顶点 -->
+                        <circle cx="200" cy="50" r="4" fill="#2c3e50"/>
+                        <text x="200" y="35" text-anchor="middle" class="vertex-label">A</text>
+                        
+                        <circle cx="50" cy="250" r="4" fill="#2c3e50"/>
+                        <text x="50" y="280" text-anchor="middle" class="vertex-label">B</text>
+                        
+                        <circle cx="350" cy="250" r="4" fill="#2c3e50"/>
+                        <text x="350" y="280" text-anchor="middle" class="vertex-label">C</text>
+                        
+                        <!-- 边长标注 -->
+                        <text x="150" y="200" class="side-label">c (AB)</text>
+                        <text x="300" y="200" class="side-label">b (AC)</text>
+                        <text x="200" y="180" class="side-label">a (BC)</text>
+                    </svg>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <h3>核心性质</h3>
+                    <ul class="properties-list">
+                        <li><strong>内角和：</strong>已知在三角形abc中，三个内角A、B、C的度数之和恒等于180度（π弧度）。</li>
+                        <li><strong>外角和：</strong>任意一个外角等于与之不相邻的两个内角之和。</li>
+                        <li><strong>稳定性：</strong>三边长度确定后，三角形的形状和大小完全确定。</li>
+                        <li><strong>不等式关系：</strong>任意两边之和大于第三边（a + b > c），任意两边之差小于第三边（|a - b| < c）。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 定理部分 -->
+            <section id="theorems" class="card">
+                <h2>常用计算定理</h2>
+                <p>在解决几何问题时，已知在三角形abc中，我们经常利用以下两个核心定理来求解未知量。</p>
+
+                <h3>1. 正弦定理</h3>
+                <p>用于已知一边及两角，或两边及其中一边的对角，求其他边和角。</p>
+                <div class="formula-box">
+                    a / sin(A) = b / sin(B) = c / sin(C) = 2R
+                </div>
+                <p>其中 R 为三角形的外接圆半径。</p>
+
+                <h3>2. 余弦定理</h3>
+                <p>用于已知三角形的三边，或两边及其夹角，求第三边或其中一个角。</p>
+                <div class="formula-box">
+                    a² = b² + c² - 2bc·cos(A)
+                </div>
+                <p>（注：此公式针对边a及其对角A）</p>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="card">
+                <h2>实际应用场景</h2>
+                <article style="margin-bottom: 20px;">
+                    <h3>航海与航空导航</h3>
+                    <p>在已知在三角形abc中，通过测量两个参照物之间的夹角和距离，可以计算出船只或飞机相对于目标点的位置。这是基于三角函数的基础应用。</p>
+                </article>
+                <article>
+                    <h3>建筑测量</h3>
+                    <p>在无法直接测量两点间距离（如跨越河流）的情况下，通过构建辅助三角形，利用勾股定理或余弦定理，可以精确计算出直线距离。</p>
+                </article>
+            </section>
+
+        </div>
+
+        <!-- 右侧：工具与导航 -->
+        <aside class="sidebar">
+            <div id="calculator" class="card">
+                <h2>在线计算工具</h2>
+                <p style="margin-bottom: 15px; font-size: 0.9rem; color: #666;">已知两边及夹角，求第三边。</p>
+                
+                <div class="calc-group">
+                    <label for="side-b">边长 b (AC)</label>
+                    <input type="number" id="side-b" placeholder="输入 b" value="5">
+                </div>
+                
+                <div class="calc-group">
+                    <label for="side-c">边长 c (AB)</label>
+                    <input type="number" id="side-c" placeholder="输入 c" value="6">
+                </div>
+                
+                <div class="calc-group">
+                    <label for="angle-a">角 A (度)</label>
+                    <input type="number" id="angle-a" placeholder="输入 A" value="60">
+                </div>
+
+                <button class="btn" onclick="calculateSide()">计算边 a</button>
+                
+                <div id="result" class="result-display"></div>
+            </div>
+
+            <div class="card">
+                <h3>相关专题</h3>
+                <a href="#" class="sidebar-link">直角三角形性质</a>
+                <a href="#" class="sidebar-link">全等三角形判定</a>
+                <a href="#" class="sidebar-link">相似三角形应用</a>
+                <a href="#" class="sidebar-link">海伦公式求面积</a>
+            </div>
+
+            <div class="card">
+                <h3>常见问题 (FAQ)</h3>
+                <details style="margin-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: 500;">已知在三角形abc中，如何判断它是锐角、直角还是钝角？</summary>
+                    <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">利用余弦定理计算最大角的余弦值。若 cos(A) > 0，则为锐角；若 cos(A) = 0，则为直角；若 cos(A) < 0，则为钝角。</p>
+                </details>
+                <details style="margin-bottom: 10px;">
+                    <summary style="cursor: pointer; font-weight: 500;">如果已知在三角形abc中，两边之和小于第三边，会有什么结果？</summary>
+                    <p style="font-size: 0.9rem; margin-top: 5px; color: #666;">这样的三条线段无法构成三角形，无法形成封闭图形。</p>
+                </details>
+            </div>
+        </aside>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2023 几何实验室 - 专注数学教育与服务</p>
+        <p>已知在三角形abc中，我们致力于提供精准的几何计算支持。</p>
+    </div>
+</footer>
+
+<script>
+    function calculateSide() {
+        // 获取输入值
+        const b = parseFloat(document.getElementById('side-b').value);
+        const c = parseFloat(document.getElementById('side-c').value);
+        const angleA = parseFloat(document.getElementById('angle-a').value);
+        const resultDiv = document.getElementById('result');
+
+        // 验证输入有效性
+        if (isNaN(b) || isNaN(c) || isNaN(angleA)) {
+            resultDiv.style.display = 'block';
+            resultDiv.style.backgroundColor = '#fdebd0';
+            resultDiv.style.color = '#d35400';
+            resultDiv.textContent = "请输入有效的数字。";
+            return;
+        }
+
+        if (angleA <= 0 || angleA >= 180) {
+            resultDiv.style.display = 'block';
+            resultDiv.style.backgroundColor = '#fdebd0';
+            resultDiv.style.color = '#d35400';
+            resultDiv.textContent = "角度必须在 0 到 180 度之间。";
+            return;
+        }
+
+        // 使用余弦定理计算边长 a
+        // a² = b² + c² - 2bc * cos(A)
+        const angleRad = angleA * Math.PI / 180;
+        const aSquared = b * b + c * c - 2 * b * c * Math.cos(angleRad);
+        
+        // 处理浮点数误差导致的极小负数
+        const a = Math.sqrt(Math.max(0, aSquared));
+
+        // 显示结果
+        resultDiv.style.display = 'block';
+        resultDiv.style.backgroundColor = '#e8f5e9';
+        resultDiv.style.color = '#27ae60';
+        resultDiv.textContent = `计算结果：边长 a = ${a.toFixed(4)}`;
+    }
+</script>
+
+</body>
+  </html>
