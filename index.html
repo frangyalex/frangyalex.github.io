@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="证监会减持新规全面解读，涵盖2024年新规核心要点、上市公司减持限制、大股东减持规则及合规操作指南。提供最新减持新规条文解读、案例分析及合规风险防范建议。">
+    <meta name="keywords" content="证监会减持新规,减持新规解读,上市公司减持限制,大股东减持规则,股票减持合规">
+    <title>证监会减持新规-上市公司减持限制与合规操作指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #a93226;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem var(--spacing-unit);
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Key Points Grid */
+        .points-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .point-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
+        }
+
+        .point-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .point-card h3::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .point-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        /* Timeline / Regulation Flow */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Compliance Checklist */
+        .checklist-container {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+        }
+
+        .checklist-icon {
+            color: #27ae60;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .checklist-content h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .checklist-content p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #f8f9fa;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 1.5rem 0;
+        }
+
+        .footer-links a {
+            margin: 0 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .header-inner {
+                justify-content: center;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item::before {
+                left: -2.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">减持<span>新规</span>解读</a>
+        <nav class="nav-links">
+            <a href="#core-points" class="active">核心要点</a>
+            <a href="#timeline">监管历程</a>
+            <a href="#compliance">合规操作</a>
+            <a href="#faq">常见问题</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>证监会减持新规全解析</h1>
+        <p>深入理解2024年最新上市公司股份减持监管政策，把握市场脉搏，规避合规风险。</p>
+        <a href="#core-points" class="cta-button">查看新规详情</a>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- 核心要点 -->
+    <section id="core-points">
+        <div class="section-header">
+            <h2>2024年新规核心要点</h2>
+            <p>证监会针对上市公司股东减持行为出台了一系列严格监管措施，旨在维护市场稳定，保护中小投资者利益。</p>
+        </div>
+        
+        <div class="points-grid">
+            <div class="point-card">
+                <h3>减持数量限制</h3>
+                <p>大股东在任意连续90日内，减持股份的总数不得超过公司股份总数的1%。非大股东减持比例限制更为严格，防止突击套现。</p>
+            </div>
+            <div class="point-card">
+                <h3>窗口期限制</h3>
+                <p>在定期报告（季报、半年报、年报）公告前10日内，以及在业绩预告、业绩快报公告前10日内，禁止减持股份，确保信息披露的公平性。</p>
+            </div>
+            <div class="point-card">
+                <h3>减持方式规范</h3>
+                <p>减持股份应当通过证券交易所集中竞价交易系统，或者大宗交易系统进行。协议转让需遵守特定比例限制，不得变相规避减持新规。</p>
+            </div>
+            <div class="point-card">
+                <h3>分红与减持挂钩</h3>
+                <p>上市公司分红水平与股东减持比例挂钩，鼓励长期投资。对于分红未达到一定标准的公司，大股东减持将受到更严格的限制。</p>
+            </div>
+            <div class="point-card">
+                <h3>违规成本提高</h3>
+                <p>强化监管执法力度，对于违规减持行为，除责令改正、给予警告外，还将处以高额罚款，并实施市场禁入措施。</p>
+            </div>
+            <div class="point-card">
+                <h3>预披露机制</h3>
+                <p>减持计划实施前，股东需向交易所进行预披露。减持计划变更或未按计划实施时，也需及时公告，保障投资者知情权。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 监管历程 -->
+    <section id="timeline">
+        <div class="section-header">
+            <h2>减持新规监管历程</h2>
+            <p>从2017年首次全面收紧，到2024年的持续优化，监管层不断调整减持规则以适应市场变化。</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">2017年</div>
+                <div class="timeline-title">首次全面收紧</div>
+                <div class="timeline-desc">证监会发布《上市公司大股东、董监高减持股份的若干规定》，全面规范上市公司股东减持行为。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2020年</div>
+                <div class="timeline-title">规则细化与调整</div>
+                <div class="timeline-desc">针对创业板块实施差异化减持规则，同时发布《关于创业板首次公开发行股票注册制上市招股说明书内容与格式准则》相关减持条款。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2023年</div>
+                <div class="timeline-title">重点整治乱象</div>
+                <div class="timeline-desc">针对"清仓式"减持、绕道减持等市场乱象，交易所发布针对性监管指引，要求上市公司大股东规范减持行为。</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">2024年</div>
+                <div class="timeline-title">新规持续深化</div>
+                <div class="timeline-desc">延续并强化减持监管，重点防范违规减持，完善分红与减持挂钩机制，强调"长钱长投"理念。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 合规操作 -->
+    <section id="compliance">
+        <div class="section-header">
+            <h2>合规操作指南</h2>
+            <p>上市公司股东及董监高在进行减持操作前，应严格遵循以下流程与原则。</p>
+        </div>
+        
+        <div class="checklist-container">
+            <div class="checklist-item">
+                <div class="checklist-icon">✓</div>
+                <div class="checklist-content">
+                    <h4>核查身份与持股比例</h4>
+                    <p>确认自身是否为大股东或董监高，精确计算当前持有的股份数量及占总股本的比例，避免因计算错误导致违规。</p>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-icon">✓</div>
+                <div class="checklist-content">
+                    <h4>查阅定期报告时间表</h4>
+                    <p>确认最近一次定期报告的披露日期及业绩预告/快报时间，严格避开窗口期（公告前10日）。</p>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-icon">✓</div>
+                <div class="checklist-content">
+                    <h4>制定减持计划并预披露</h4>
+                    <p>制定具体的减持数量、价格区间、减持方式及减持期限，并通过交易所官网进行预披露。</p>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-icon">✓</div>
+                <div class="checklist-content">
+                    <h4>选择合规减持方式</h4>
+                    <p>大宗交易需提前与受让方确认，且受让方在6个月内不得减持；集中竞价需严格遵守90日1%的限制。</p>
+                </div>
+            </div>
+            <div class="checklist-item">
+                <div class="checklist-icon">✓</div>
+                <div class="checklist-content">
+                    <h4>及时履行信息披露</h4>
+                    <p>减持计划实施完毕或变更时，应在规定时间内公告，不得隐瞒或延迟披露。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="section-header">
+            <h2>常见问题解答</h2>
+            <p>针对投资者和股东在实际操作中遇到的疑难问题进行解答。</p>
+        </div>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">什么是大股东？</div>
+                <div class="faq-answer">大股东是指公司控股股东、持股5%以上的股东。对于持股比例在5%以下的股东，通常不适用大股东的减持限制，但仍需遵守一般股东的减持规则。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">违规减持会受到什么处罚？</div>
+                <div class="faq-answer">对于违规减持行为，监管机构可责令改正、给予警告，没收违法所得，并处以违法所得1倍以上10倍以下的罚款。对于相关责任人，可采取市场禁入措施。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">减持新规是否适用于所有板块？</div>
+                <div class="faq-answer">减持新规适用于所有在上海证券交易所、深圳证券交易所、北京证券交易所上市的公司，但各板块根据自身特点制定了具体的实施细则。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何查询最新的减持新规全文？</div>
+                <div class="faq-answer">建议访问中国证券监督管理委员会官方网站（www.csrc.gov.cn）或各证券交易所官网，查阅最新的法律法规及业务指南。</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="logo" style="justify-content: center; color: #fff; margin-bottom: 1rem;">
+            减持<span>新规</span>解读
+        </div>
+        <div class="footer-links">
+            <a href="#">证监会官网</a>
+            <a href="#">上交所公告</a>
+            <a href="#">深交所公告</a>
+            <a href="#">北交所公告</a>
+        </div>
+        <p class="disclaimer">
+            免责声明：本网站内容仅供学习参考，不构成任何投资建议或法律意见。股市有风险，投资需谨慎。请以中国证券监督管理委员会及各证券交易所发布的最新官方文件为准。
+        </p>
+        <p style="margin-top: 1rem; font-size: 0.8rem;">&copy; 2024 减持新规解读平台. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle Logic
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', event => {
+            const parent = item.parentElement;
+            const isActive = parent.classList.contains('active');
+            
+            // Close all other items
+            document.querySelectorAll('.faq-item').forEach(child => {
+                child.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                parent.classList.add('active');
+            }
+        });
+    });
+
+    // Smooth Scroll for Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
